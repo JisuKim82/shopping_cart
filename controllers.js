@@ -7,8 +7,12 @@ bookApp.controller('BookListCtrl', function($scope){
     {"title": "The Old Man and the Sea", "author": "Ernest Hemingway", "price": 15, "qty": 4}
   ];
 
-  $scope.submit = function(){
-    $scope.books.push({"title":$scope.title, "author":$scope.author, "price":$scope.price, "qty":$scope.quantity});
+  $scope.book = {};
+  
+  $scope.submit = function(book){
+    $scope.books.push(book);
+    $scope.book = {}; //reset form inputs
+    $scope.bookForm.$setPristine();
   };
 
   $scope.remove = function($index){

@@ -9,11 +9,11 @@
 
 <body ng-controller="BookListCtrl">
 
-  <form name='bookForm' ng-submit="bookForm.$valid && submit()" novalidate>Add new book:<br>
-    <input type="text" placeholder="Title" ng-model="title" required>
-    <input type="text" placeholder="Author" ng-model="author" required>
-    <input type="number" placeholder="Price" ng-model="price" required>
-    <input type="number" placeholder="Quantity" ng-model="quantity" required>
+  <form name='bookForm' ng-submit="bookForm.$valid && submit(book)" novalidate>Add new book:<br>
+    <input type="text" placeholder="Title" ng-model="book.title" required>
+    <input type="text" placeholder="Author" ng-model="book.author" required>
+    <input type="number" placeholder="Price" ng-model="book.price" required>
+    <input type="number" placeholder="Quantity" ng-model="book.qty" required>
     <input type="submit" class="btn-primary" value="Submit"><br>
     <span ng-show="bookForm.$dirty && bookForm.$error.required">All fields are required</span>
   </form>
