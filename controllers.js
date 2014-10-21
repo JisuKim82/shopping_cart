@@ -9,11 +9,11 @@ bookApp.controller('BookListCtrl', function($scope){
 
   $scope.submit = function(){
     $scope.books.push({"title":$scope.title, "author":$scope.author, "price":$scope.price, "qty":$scope.quantity});
-  }
+  };
 
-  $scope.delete = function($index){
+  $scope.remove = function($index){
      $scope.books.splice($index,1);     
-  }
+  };
 
   $scope.totalPrice = function(){
     var total = 0;
